@@ -15,6 +15,7 @@
 		E498B65B1FFECBCD0025CB69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E498B6591FFECBCD0025CB69 /* LaunchScreen.storyboard */; };
 		E498B6631FFECF3C0025CB69 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = E498B6621FFECF3C0025CB69 /* pokemon.csv */; };
 		E498B6651FFED70A0025CB69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E498B6641FFED70A0025CB69 /* GoogleService-Info.plist */; };
+		E498B6691FFFBD450025CB69 /* GeoFire in Resources */ = {isa = PBXBuildFile; fileRef = E498B6681FFFBD450025CB69 /* GeoFire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E498B65C1FFECBCD0025CB69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E498B6621FFECF3C0025CB69 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		E498B6641FFED70A0025CB69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E498B6681FFFBD450025CB69 /* GeoFire */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GeoFire; sourceTree = "<group>"; };
 		EF7F2C7213CC37E465DE0A99 /* Pods-PokeRadar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A39AAB7185DA9B3A0EA8E4 /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		E498B64F1FFECBCD0025CB69 /* PokeRadar */ = {
 			isa = PBXGroup;
 			children = (
+				E498B6681FFFBD450025CB69 /* GeoFire */,
 				E498B6621FFECF3C0025CB69 /* pokemon.csv */,
 				E498B6501FFECBCD0025CB69 /* AppDelegate.swift */,
 				E498B6521FFECBCD0025CB69 /* ViewController.swift */,
@@ -156,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E498B6691FFFBD450025CB69 /* GeoFire in Resources */,
 				E498B65B1FFECBCD0025CB69 /* LaunchScreen.storyboard in Resources */,
 				E498B6631FFECF3C0025CB69 /* pokemon.csv in Resources */,
 				E498B6651FFED70A0025CB69 /* GoogleService-Info.plist in Resources */,
