@@ -75,7 +75,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     }
 
     func createSighting(forLocation location: CLLocation, with pokemonId: Int) {
-        self.geoFire.setLocation(location, forKey: "\(pokemonId)")
+        self.geoFire.setLocation(location, forKey: "\(pokemonId)") 
     }
     
     @IBAction func reportPokemon(_ sender: UIButton) {
