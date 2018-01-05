@@ -22,6 +22,7 @@
 		E4C072FB1FFFD44900912DD4 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C072F61FFFD44800912DD4 /* GFQuery.m */; };
 		E4C072FD2000006300912DD4 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C072FC2000006300912DD4 /* Pokemon.swift */; };
 		E4C072FF200006B300912DD4 /* PokemonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C072FE200006B300912DD4 /* PokemonFactory.swift */; };
+		E4C073012000116600912DD4 /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C073002000116600912DD4 /* PokemonAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E4C072F61FFFD44800912DD4 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		E4C072FC2000006300912DD4 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		E4C072FE200006B300912DD4 /* PokemonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFactory.swift; sourceTree = "<group>"; };
+		E4C073002000116600912DD4 /* PokemonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
 		EF7F2C7213CC37E465DE0A99 /* Pods-PokeRadar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A39AAB7185DA9B3A0EA8E4 /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				E498B6621FFECF3C0025CB69 /* pokemon.csv */,
 				E498B6501FFECBCD0025CB69 /* AppDelegate.swift */,
 				E498B6521FFECBCD0025CB69 /* ViewController.swift */,
+				E4C073002000116600912DD4 /* PokemonAnnotation.swift */,
 				E4C072FC2000006300912DD4 /* Pokemon.swift */,
 				E4C072FE200006B300912DD4 /* PokemonFactory.swift */,
 				E498B6541FFECBCD0025CB69 /* Main.storyboard */,
@@ -302,6 +305,7 @@
 				E4C072F71FFFD44900912DD4 /* GeoFire.m in Sources */,
 				E4C072FA1FFFD44900912DD4 /* GFGeoHashQuery.m in Sources */,
 				E4C072FF200006B300912DD4 /* PokemonFactory.swift in Sources */,
+				E4C073012000116600912DD4 /* PokemonAnnotation.swift in Sources */,
 				E4C072FB1FFFD44900912DD4 /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
