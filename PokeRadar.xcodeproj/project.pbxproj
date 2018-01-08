@@ -23,6 +23,8 @@
 		E4C072FD2000006300912DD4 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C072FC2000006300912DD4 /* Pokemon.swift */; };
 		E4C072FF200006B300912DD4 /* PokemonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C072FE200006B300912DD4 /* PokemonFactory.swift */; };
 		E4C073012000116600912DD4 /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C073002000116600912DD4 /* PokemonAnnotation.swift */; };
+		E4C073032003B04500912DD4 /* PokedexCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C073022003B04500912DD4 /* PokedexCollectionViewController.swift */; };
+		E4C073052003B22B00912DD4 /* PokemonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C073042003B22B00912DD4 /* PokemonCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		E4C072FC2000006300912DD4 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		E4C072FE200006B300912DD4 /* PokemonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFactory.swift; sourceTree = "<group>"; };
 		E4C073002000116600912DD4 /* PokemonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
+		E4C073022003B04500912DD4 /* PokedexCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexCollectionViewController.swift; sourceTree = "<group>"; };
+		E4C073042003B22B00912DD4 /* PokemonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCollectionViewCell.swift; sourceTree = "<group>"; };
 		EF7F2C7213CC37E465DE0A99 /* Pods-PokeRadar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeRadar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeRadar/Pods-PokeRadar.debug.xcconfig"; sourceTree = "<group>"; };
 		F3A39AAB7185DA9B3A0EA8E4 /* Pods_PokeRadar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeRadar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +104,8 @@
 		E498B64F1FFECBCD0025CB69 /* PokeRadar */ = {
 			isa = PBXGroup;
 			children = (
+				E4C073022003B04500912DD4 /* PokedexCollectionViewController.swift */,
+				E4C073042003B22B00912DD4 /* PokemonCollectionViewCell.swift */,
 				E4C072E51FFFD44800912DD4 /* GeoFire */,
 				E498B6621FFECF3C0025CB69 /* pokemon.csv */,
 				E498B6501FFECBCD0025CB69 /* AppDelegate.swift */,
@@ -298,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C072F81FFFD44900912DD4 /* GFBase32Utils.m in Sources */,
+				E4C073032003B04500912DD4 /* PokedexCollectionViewController.swift in Sources */,
 				E4C072FD2000006300912DD4 /* Pokemon.swift in Sources */,
 				E498B6531FFECBCD0025CB69 /* ViewController.swift in Sources */,
 				E4C072F91FFFD44900912DD4 /* GFGeoHash.m in Sources */,
@@ -306,6 +313,7 @@
 				E4C072FA1FFFD44900912DD4 /* GFGeoHashQuery.m in Sources */,
 				E4C072FF200006B300912DD4 /* PokemonFactory.swift in Sources */,
 				E4C073012000116600912DD4 /* PokemonAnnotation.swift in Sources */,
+				E4C073052003B22B00912DD4 /* PokemonCollectionViewCell.swift in Sources */,
 				E4C072FB1FFFD44900912DD4 /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

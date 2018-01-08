@@ -6,9 +6,18 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltThin.ttf">
+            <string>MarkerFelt-Thin</string>
+        </array>
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,11 +30,11 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fV6-Lm-CmM">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20B-Sb-BQ0">
-                                <rect key="frame" x="139" y="551" width="97" height="96"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20B-Sb-BQ0">
+                                <rect key="frame" x="138" y="551" width="97" height="96"/>
                                 <state key="normal" image="pokeball"/>
                                 <connections>
-                                    <action selector="reportPokemon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSa-d9-6xw"/>
+                                    <segue destination="mYM-6Q-Frd" kind="show" id="k8v-mZ-zg8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -47,6 +56,105 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Pokedex Collection View Controller-->
+        <scene sceneID="Ybr-L0-Yrn">
+            <objects>
+                <collectionViewController id="dkp-9c-DjG" customClass="PokedexCollectionViewController" customModule="PokeRadar" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Wul-gS-Ew5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kGP-ok-uQ9">
+                            <size key="itemSize" width="128" height="158"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonCell" id="uVx-i5-wSY" customClass="PokemonCollectionViewCell" customModule="PokeRadar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="158"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sqd-p2-MKA">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="sqd-p2-MKA" secondAttribute="height" multiplier="1:1" id="RHt-92-Qkx"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udz-Cx-VyC">
+                                            <rect key="frame" x="0.0" y="128" width="128" height="30"/>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clR-l3-JbT">
+                                            <rect key="frame" x="2" y="2" width="35" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="HU1-4i-mEf"/>
+                                                <constraint firstAttribute="height" constant="21" id="ZYb-DM-fau"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="udz-Cx-VyC" firstAttribute="top" secondItem="sqd-p2-MKA" secondAttribute="bottom" id="6Wj-TO-0Nz"/>
+                                    <constraint firstItem="clR-l3-JbT" firstAttribute="top" secondItem="uVx-i5-wSY" secondAttribute="top" constant="2" id="8h2-8a-tH0"/>
+                                    <constraint firstAttribute="trailing" secondItem="udz-Cx-VyC" secondAttribute="trailing" id="GHv-X6-XxC"/>
+                                    <constraint firstAttribute="bottom" secondItem="udz-Cx-VyC" secondAttribute="bottom" id="IbC-2m-dgA"/>
+                                    <constraint firstAttribute="trailing" secondItem="sqd-p2-MKA" secondAttribute="trailing" id="Sdm-Di-dsm"/>
+                                    <constraint firstItem="clR-l3-JbT" firstAttribute="leading" secondItem="uVx-i5-wSY" secondAttribute="leading" constant="2" id="Xws-i8-8YK"/>
+                                    <constraint firstItem="sqd-p2-MKA" firstAttribute="leading" secondItem="uVx-i5-wSY" secondAttribute="leading" id="kH9-Kg-jaK"/>
+                                    <constraint firstItem="udz-Cx-VyC" firstAttribute="leading" secondItem="uVx-i5-wSY" secondAttribute="leading" id="rmh-PX-hIG"/>
+                                    <constraint firstItem="sqd-p2-MKA" firstAttribute="top" secondItem="uVx-i5-wSY" secondAttribute="top" id="yaU-33-Erq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="pokemonIdLabel" destination="clR-l3-JbT" id="yrx-IX-Xti"/>
+                                    <outlet property="pokemonImageView" destination="sqd-p2-MKA" id="Br5-aV-jfj"/>
+                                    <outlet property="pokemonLabel" destination="udz-Cx-VyC" id="cj4-eq-32P"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dkp-9c-DjG" id="pqS-mK-IgK"/>
+                            <outlet property="delegate" destination="dkp-9c-DjG" id="toY-wz-cbP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="O0K-0d-S9F">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="yAa-01-evO">
+                            <connections>
+                                <action selector="cancelPress:" destination="dkp-9c-DjG" id="wMm-IR-fml"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNj-q5-4Vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1757.5999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fk8-bO-bEq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mYM-6Q-Frd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eGD-Nf-7s0">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dkp-9c-DjG" kind="relationship" relationship="rootViewController" id="t3f-yf-RD0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ7-wL-tqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="902.39999999999998" y="119.64017991004499"/>
         </scene>
     </scenes>
     <resources>
