@@ -113,6 +113,25 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         })
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        if let annotation = view.annotation as? PokemonAnnotation {
+            let place = MKPlacemark(coordinate: annotation.coordinate)
+            let destination = MKMapItem(placemark: place)
+            destination.name = "\(annotation.pokemon.name) avisado"
+            
+            let distance: CLLocationDistance = 1000
+            let span = MKCoordinateRegionMakeWithDistance(annotation.coordinate, distance, distance)
+            
+            let options = [
+                MKLaunchOptionsMapCenterKey : NSValue(mkCoordinate: span.center),
+                MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: span.span),
+                MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+                ] as [String : Any]
+            
+            MKMapItem.openMaps(with: [destination], launchOptions: options)
+        }
+    }
+    
     @IBAction func reportPokemon(_ sender: UIButton) {
         let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude,
                                   longitude: self.mapView.centerCoordinate.longitude)
