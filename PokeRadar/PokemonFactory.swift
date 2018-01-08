@@ -22,7 +22,7 @@ class PokemonFactory {
         for row in csvRows {
             if let id = Int(row[0]) {
                 if id > 151 { break }
-                let name = row[1]
+                let name = row[1].capitalized
                 let pokemon = Pokemon(id: id, name: name)
                 self.pokemons.append(pokemon)
             }
