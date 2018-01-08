@@ -29,6 +29,9 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.mapView.delegate = self
         self.mapView.userTrackingMode = .follow
         self.locationManager.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(notifyPokemon), name: NSNotification.Name(rawValue: "NotifyPokemon"), object: nil)
+        
         locationAuthStatus()
     }
 
@@ -132,13 +135,20 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         }
     }
     
-    @IBAction func reportPokemon(_ sender: UIButton) {
+    /*@IBAction func reportPokemon(_ sender: UIButton) {
         let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude,
                                   longitude: self.mapView.centerCoordinate.longitude)
         let pokemonIdRand = arc4random_uniform(151) + 1
         self.createSighting(forLocation: location, with: Int(pokemonIdRand))
         
-    }
+    }*/
     
+    @objc func notifyPokemon(notif: Notification){
+        if let pokemon = notif.object as? Pokemon {
+            let location = CLLocation(latitude: self.mapView.centerCoordinate.latitude,
+                                      longitude: self.mapView.centerCoordinate.longitude)
+            self.createSighting(forLocation: location, with: pokemon.id)
+        }
+    }
 }
 
